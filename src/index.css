@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #0C0C0C;
+    --text-dark: #D7E2EA;
+    --bg-light: #FFFFFF;
+    --text-light: #0C0C0C;
+    --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    --font-secondary: 'Sora', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: #0C0C0C;
+    color: #D7E2EA;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0C0C0C;
+    color: #D7E2EA;
+    overflow-x: clip;
+  }
+
+  h1, h2, .font-display {
+    font-family: var(--font-display);
+  }
+
+  h3, h4, .font-secondary {
+    font-family: var(--font-secondary);
+  }
+}
+
+/* Primary headings & navigation: Space Grotesk */
+.font-kanit,
+.font-space {
+  font-family: var(--font-display);
+}
+
+/* Secondary headings & display accents: Sora */
+.font-sora {
+  font-family: var(--font-secondary);
+}
+
+/* Body copy, descriptions, metadata, buttons: Inter */
+.font-inter {
+  font-family: var(--font-sans);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Premium Metallic Silver Headline Gradient */
+.text-gradient-metallic {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D7E2EA 48%, #7A8494 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.text-gradient-metallic-bright {
+  background: linear-gradient(135deg, #FFFFFF 0%, #C8D8E8 55%, #9B8EC7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Signature Accent Gradient */
+.bg-accent-gradient {
+  background: linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%);
+}
+
+.bg-accent-gradient-subtle {
+  background: linear-gradient(123deg, rgba(24, 1, 31, 0.85) 7%, rgba(182, 0, 168, 0.28) 37%, rgba(118, 33, 176, 0.25) 72%, rgba(190, 76, 0, 0.25) 100%);
+}
+
+.border-metallic {
+  border-color: rgba(215, 226, 234, 0.12);
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverseSlow {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 22s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinReverseSlow 28s linear infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
